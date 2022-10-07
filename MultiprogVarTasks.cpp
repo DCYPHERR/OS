@@ -18,7 +18,7 @@ int main()
                 printf("there is no further memory remaining:");
             printf("the memory alocated for process %d is:%d", i + 1, m1);
             m2 = m - m1;
-            printf("\nremainig memory is:%d", m2);
+            printf("\nremaining memory is:%d", m2);
             m = m2;
         }
         else
