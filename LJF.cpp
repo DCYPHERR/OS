@@ -2,7 +2,7 @@
     using namespace std;
     struct process
     {
-        int at, bt, id, wtime, gift;
+        int at, bt, id, wtime, why;
         char name[10];
         bool exe;
     } s[10];
@@ -13,7 +13,7 @@
         {
             for (int j = 0; j < n - i - 1; j++)
             {
-                if (readyqueue[j]->gift > readyqueue[j + 1]->gift)
+                if (readyqueue[j]->why > readyqueue[j + 1]->why)
                 {
                     process *temp = readyqueue[j];
                     readyqueue[j] = readyqueue[j + 1];
@@ -36,7 +36,7 @@
             cin >> s[i].at;
             cout << "Enter the Burst Time: ";
             cin >> s[i].bt;
-            s[i].gift = s[i].bt;
+            s[i].why = s[i].bt;
             s[i].exe = false;
             s[i].wtime = 0;
         }
